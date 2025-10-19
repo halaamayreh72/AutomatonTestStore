@@ -53,8 +53,23 @@ public class MyTestCases extends MyData
 		 WebElement AddressOne = driver.findElement(By.id("AccountFrm_address_1"));
 		 WebElement theCountry = driver.findElement(By.id("AccountFrm_country_id"));
 		 WebElement TheState = driver.findElement(By.id("AccountFrm_zone_id"));
-		 
+		 WebElement ThePostalCode = driver.findElement(By.id("AccountFrm_postcode"));
+		 WebElement LoginName = driver.findElement(By.id("AccountFrm_loginname"));
+		WebElement ThePassword = driver.findElement(By.id("AccountFrm_password"));
+		WebElement TheConfirmPassword = driver.findElement(By.id("AccountFrm_confirm"));
+		WebElement TheAgreeBox = driver.findElement(By.id("AccountFrm_agree"));
+		WebElement SubscribeYes = driver.findElement(By.id("AccountFrm_newsletter1"));
+		WebElement SubscribeNo = driver.findElement(By.name("newsletter"));
+		if (WantToSubscribe=true) 
+			 
+		 {
+			SubscribeYes.click();
+		 }else {SubscribeNo.click();}
+		Thread.sleep(2000);
 		
+		WebElement Continue = driver.findElement(By.cssSelector(".btn.btn-orange.pull-right.lock-on-click"));
+
+
 		 Select mySelectElementForCountry = new Select(theCountry);
 		 mySelectElementForCountry.selectByIndex(108);
           Thread.sleep(2000);
@@ -74,6 +89,13 @@ public class MyTestCases extends MyData
 		 TheFax.sendKeys(theFax);
 		 AddressOne.sendKeys(theAdressOne);
 		 TheCityInput.sendKeys(theCity);
+		 ThePostalCode.sendKeys(PostalCode);
+		 LoginName.sendKeys(LOGINNAME);
+		 ThePassword.sendKeys(Password);
+		 TheConfirmPassword.sendKeys(Password);
+		 TheAgreeBox.click();
+		 Thread.sleep(2000);
+		 Continue.click();
 		 
 		
 		

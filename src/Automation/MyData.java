@@ -5,7 +5,8 @@ import java.util.Random;
 public class MyData
 
 {
-	
+	 boolean WantToSubscribe ;
+
 	Random rand = new Random();
 	
 	String [] firstNames = {"Shatha" , "zainab" , "ayham" , "abdulrahman","ammar" , "sana"};
@@ -23,7 +24,14 @@ public class MyData
 	String theFax = "232445";
 	String theAdressOne = "Amman-Jordan";
 	
+	String LOGINNAME = TheFirstName+TheLastNames+randomNumberForTheEmail;
+	String PostalCode = "374327";
+	String Password = "P@$$word";
+	
 	int TheSelectIndex = rand.nextInt(1,10);
-
+	
+	 
+	 
+      
 
 }
